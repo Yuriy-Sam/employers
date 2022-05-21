@@ -17,7 +17,7 @@ class EmployersAddForm extends Component {
     }
     submitForm = (e) => {
         e.preventDefault();
-        if (this.state.name && this.state.salary) {
+        if (this.state.name.length >=3 && this.state.salary) {
             this.props.onAdd(this.state.name, this.state.salary);
             this.setState({
                 name: '',
